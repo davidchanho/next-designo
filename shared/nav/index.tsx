@@ -1,10 +1,26 @@
-import styled from "styled-components";
+import Link from "next/link";
+import React from "react";
 import { Row } from "../row";
+import { Container } from "./Nav.styles";
 
-export const Nav = styled(Row)`
-  li {
-    &:not(:last-child) {
-      margin-right: 1rem;
-    }
-  }
-`;
+const Nav = () => {
+  return (
+    <Container>
+      <ul>
+        <Row>
+          <li>
+            <Link href="/about">Our Company</Link>
+          </li>
+          <li>
+            <Link href="/locations">Locations</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact</Link>
+          </li>
+        </Row>
+      </ul>
+    </Container>
+  );
+};
+
+export default Nav;

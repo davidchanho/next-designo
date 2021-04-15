@@ -1,11 +1,6 @@
-import React from 'react'
+import styled from "styled-components";
 
-function Card() {
-    return (
-        <div>
-            
-        </div>
-    )
-}
-
-export default Card
+export const Card = styled.article`
+  text-align: center;
+  border-radius: ${(props) => props.theme.utils.borderRadius};
+`;

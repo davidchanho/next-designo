@@ -1,8 +1,10 @@
 import React from "react";
-import Template from "../../shared/template";
+import DesignTemplate from "../../components/designs/design-template";
+import { useAppContext } from "../../context";
 
 function WebDesign() {
-  return <Template></Template>;
+  const { app } = useAppContext();
+  return <DesignTemplate {...app} />;
 }
 
 export default WebDesign;

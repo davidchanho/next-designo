@@ -1,31 +1,31 @@
-import Link from "next/link";
 import React from "react";
-import { Nav } from "../nav";
+import Nav from "../nav";
 import { Row } from "../row";
 import Brand from "./Brand";
+import { Container } from "./Navbar.styles";
 
 function Navbar() {
   return (
-    <header>
+    <Container>
       <Row>
         <Brand />
-        <Nav>
-          <ul>
-            <Row>
-              <li>
-                <Link href="/about">Our Company</Link>
-              </li>
-              <li>
-                <Link href="/locations">Locations</Link>
-              </li>
-              <li>
-                <Link href="/contact">Contact</Link>
-              </li>
-            </Row>
-          </ul>
-        </Nav>
+        <span>
+          <img
+            src="/assets/shared/mobile/icon-hamburger.svg"
+            alt=""
+            width={24}
+            height={20}
+          />
+          <img
+            src="/assets/shared/mobile/icon-close.svg"
+            alt=""
+            width={24}
+            height={20}
+          />
+        </span>
+        <Nav />
       </Row>
-    </header>
+    </Container>
   );
 }
 

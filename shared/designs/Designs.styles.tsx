@@ -1,14 +1,11 @@
+import { cover } from "polished";
 import styled from "styled-components";
 
 export const Grid = styled.section`
   width: 80vw;
   margin: 0 auto;
   display: grid;
-  grid-template-areas:
-    "web"
-    "app"
-    "graphic";
-  gap: 30px;
+  gap: 1.875rem;
   align-items: center;
   justify-content: center;
 
@@ -17,11 +14,25 @@ export const Grid = styled.section`
       "web app"
       "web graphic";
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.tablet}) {
+    grid-template-areas:
+      "web"
+      "app"
+      "graphic";
+  }
 `;
 
 export const Card = styled.div`
   position: relative;
   cursor: pointer;
+  .highlight {
+    ${cover()};
+    &:hover {
+      background-color: ${(props) => props.theme.colors.primary};
+      opacity: 0.7;
+      border-radius: ${(props) => props.theme.utils.borderRadius};
+    }
+  }
 
   &:first-child {
     grid-area: web;
@@ -34,7 +45,7 @@ export const Card = styled.div`
   }
 
   img {
-    border-radius: ${props => props.theme.utils.borderRadius};
+    border-radius: ${(props) => props.theme.utils.borderRadius};
   }
 
   hgroup {
@@ -50,6 +61,7 @@ export const Card = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
+      text-transform: uppercase;
       img {
         margin-left: 1.3125rem;
       }

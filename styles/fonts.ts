@@ -21,7 +21,7 @@ export const header3 = {
   fontWeight: "500",
 };
 
-export const paragraph1 = {
+export const paragraph = {
   fontSize: "1rem",
   lineHeight: "1.625rem",
   letterSpacing: "0",

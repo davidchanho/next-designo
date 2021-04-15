@@ -8,8 +8,16 @@ export const defaultTheme = {
 
     primary: peach["200"],
     primaryText: white["100"],
-    primaryHover: peach["100"],
-    primaryHoverText: white["100"],
+
+    secondary: white["100"],
+    secondaryText: grey["200"],
+    
+    darkBackground: peach["200"],
+    darkText: white["100"],
+    lightBackground: white["100"],
+
+    hover: peach["100"],
+    hoverText: white["100"],
 
     dark: grey["100"],
     darker: grey["200"],

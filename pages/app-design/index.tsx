@@ -1,12 +1,11 @@
-import React from 'react'
-import Template from '../../shared/template'
+import React from "react";
+import DesignTemplate from "../../components/designs/design-template";
+import { useAppContext } from "../../context";
+
 
 function AppDesign() {
-    return (
-        <Template>
-          
-        </Template>
-    )
+  const { app } = useAppContext();
+  return <DesignTemplate {...app} />;
 }
 
-export default AppDesign
+export default AppDesign;

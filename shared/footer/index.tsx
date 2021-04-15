@@ -1,8 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import { Nav } from "../nav";
 import { Row } from "../row";
-import { Container, Contact } from "./Footer.styles";
+import { Contact, Container, Nav, Social } from "./Footer.styles";
 
 function Footer() {
   return (
@@ -12,18 +11,22 @@ function Footer() {
           <img
             src="/assets/shared/desktop/logo-light.png"
             alt=""
-            width={404}
-            height={54}
+            width={202}
+            height={27}
           />
         </Link>
 
-        <ul>
-          <Nav>
-            <li>Our Company</li>
-            <li>Locations</li>
-            <li>Contact</li>
-          </Nav>
-        </ul>
+        <Nav>
+          <li>
+            <Link href="/about">Our Company</Link>
+          </li>
+          <li>
+            <Link href="/locations">Locations</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact</Link>
+          </li>
+        </Nav>
       </Row>
       <Contact>
         <div>
@@ -37,25 +40,58 @@ function Footer() {
           <p>M : contact@designo.co</p>
         </div>
         <div>
-          <ul>
-            <Nav>
-              <li>
-                <img src="/assets/shared/desktop/icon-facebook.svg" />
-              </li>
-              <li>
-                <img src="/assets/shared/desktop/icon-youtube.svg" />
-              </li>
-              <li>
-                <img src="/assets/shared/desktop/icon-twitter.svg" />
-              </li>
-              <li>
-                <img src="/assets/shared/desktop/icon-pinterest.svg" />
-              </li>
-              <li>
-                <img src="/assets/shared/desktop/icon-instagram.svg" />
-              </li>
-            </Nav>
-          </ul>
+          <Social>
+            <li>
+              <Link href="https://www.facebook.com/">
+                <img
+                  src="/assets/shared/desktop/icon-facebook.svg"
+                  alt=""
+                  width={24}
+                  height={24}
+                />
+              </Link>
+            </li>
+            <li>
+              <Link href="https://www.youtube.com/">
+                <img
+                  src="/assets/shared/desktop/icon-youtube.svg"
+                  alt=""
+                  width={24}
+                  height={24}
+                />
+              </Link>
+            </li>
+            <li>
+              <Link href="https://twitter.com/">
+                <img
+                  src="/assets/shared/desktop/icon-twitter.svg"
+                  alt=""
+                  width={24}
+                  height={24}
+                />
+              </Link>
+            </li>
+            <li>
+              <Link href="https://www.pinterest.com/">
+                <img
+                  src="/assets/shared/desktop/icon-pinterest.svg"
+                  alt=""
+                  width={24}
+                  height={24}
+                />
+              </Link>
+            </li>
+            <li>
+              <Link href="https://www.instagram.com/">
+                <img
+                  src="/assets/shared/desktop/icon-instagram.svg"
+                  alt=""
+                  width={24}
+                  height={24}
+                />
+              </Link>
+            </li>
+          </Social>
         </div>
       </Contact>
     </Container>

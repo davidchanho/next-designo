@@ -1,6 +1,6 @@
 import { normalize } from "polished";
 import { createGlobalStyle } from "styled-components";
-import { fontFamily, header1, header2, header3, paragraph1 } from "./fonts";
+import { fontFamily, header1, header2, header3, paragraph } from "./fonts";
 
 const GlobalStyle = createGlobalStyle`
 ${normalize()}
@@ -41,15 +41,29 @@ body {
   }
 
   p {
-    font-size: ${paragraph1.fontSize};
-    line-height: ${paragraph1.lineHeight};
-    letter-spacing:  ${paragraph1.letterSpacing};
-    font-weight: ${paragraph1.fontWeight};
+    font-size: ${paragraph.fontSize};
+    line-height: ${paragraph.lineHeight};
+    letter-spacing:  ${paragraph.letterSpacing};
+    font-weight: ${paragraph.fontWeight};
   }
 
   ul {
     padding: 0;
     list-style-type: none;
+  }
+
+  button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+  }
+
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 

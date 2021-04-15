@@ -1,12 +1,10 @@
-import React from 'react'
-import Template from '../../shared/template'
+import React from "react";
+import DesignTemplate from "../../components/designs/design-template";
+import { useAppContext } from "../../context";
 
 function GraphicDesign() {
-    return (
-        <Template>
-          
-        </Template>
-    )
+  const { graphic } = useAppContext();
+  return <DesignTemplate {...graphic} />;
 }
 
-export default GraphicDesign
+export default GraphicDesign;
